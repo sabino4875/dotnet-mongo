@@ -1,15 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
 	  <TargetFramework>net6.0</TargetFramework>
 	  <Nullable>disable</Nullable>
 	  <ImplicitUsings>disable</ImplicitUsings>
-	  <PackageId>Api.MongoDB</PackageId>
+	  <PackageId>Api.MongoDB.Application</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MongoDB.Driver" Version="2.20.0" />
+    <Folder Include="Mapping\" />
+    <Folder Include="DTO\" />
+    <Folder Include="Services\" />
   </ItemGroup>
-
 
 </Project>
