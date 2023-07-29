@@ -4,14 +4,12 @@
 	  <TargetFramework>net6.0</TargetFramework>
 	  <Nullable>disable</Nullable>
 	  <ImplicitUsings>disable</ImplicitUsings>
-	  <PackageId>Api.MongoDB.Domain</PackageId>
+	  <PackageId>Api.CoronaVirusStatistics.Domain</PackageId>
 
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Validation\" />
-    <Folder Include="Repositories\" />
+    <PackageReference Include="MongoDB.Driver" Version="2.20.0" />
   </ItemGroup>
 
 </Project>
