@@ -1,20 +1,13 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
+using Api.CoronaVirusStatistics.EndPoints;
+using Api.CoronaVirusStatistics.IoC;
+using Microsoft.AspNetCore.Builder;
 
-namespace Api
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
+var builder = WebApplication.CreateBuilder(args);
+builder.AddInfraStructure();
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
-}
+var app = builder.Build();
+app.MapInfraStructure();
+
+app.MapInfectadoEndPoints();
+
+app.Run("https://localhost:3000");

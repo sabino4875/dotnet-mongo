@@ -1,0 +1,18 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "mongodb": {
+    "uri": "", //informe a url do mongodb, seja a da versão standalone ou do mongodb atlas
+    "database": "",//informe o nome do banco de dados
+    "port": "27017",
+    "username": "", //informe o nome do usuário
+    "password": "", //informe a senha
+    "useAtlas": true // informe se será utilizado o mongodb atlas ou não
+  }
+}
